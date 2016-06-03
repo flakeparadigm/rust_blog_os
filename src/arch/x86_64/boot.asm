@@ -5,6 +5,7 @@ section .text
 bits 32
 start:
     mov esp, stack_top
+    mov edi, ebx    ; Move Multiboot info pointer to edi
 
     call check_multiboot
     call check_cpuid
@@ -179,7 +180,7 @@ p3_table:
 p2_table:
     resb 4096
 stac_bottom:
-    resb 64 ; asks GRUB to reserve us 64B memory
+    resb 4096 ; asks GRUB to reserve us 4KB memory
 stack_top:
 
 section .rodata

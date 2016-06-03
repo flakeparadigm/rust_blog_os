@@ -1,5 +1,5 @@
 [package]
-name = "tyler_os"
+name = "rust_blog_os"
 version = "0.1.0"
 authors = ["Tyler Nienhouse <flakeparadigm@gmail.com>", "Philipp Oppermann <dev@phil-opp.com>"]
 
@@ -9,3 +9,6 @@ crate-type = ["staticlib"]
 [dependencies]
 rlibc = "1.0.0"
 spin = "0.4.0"
+
+[dependencies.multiboot2]
+git = "https://github.com/phil-opp/multiboot2-elf64"
